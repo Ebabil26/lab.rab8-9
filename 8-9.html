@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+	</title>
+</head>
+<body>
+<script>
+	//Вариант 1
+	var users = ['First','Second','Third'];
+	var login = ['perviy','vtoroy','tretiy'];
+	users.unshift ( prompt('Введите имя нового пользователя'));
+	if (users[0].length != users.length) {
+		login.pop();
+	} else {
+		login.shift();
+		login.pop();
+	};
+	console.log(users, login);
+	console.log(users.length, login.length);
+
+	//1
+	for (;;) {
+		console.log('Yes ');
+		break;
+	};
+		//2
+	for (var i= 100;i>=0;i-=20) {
+		console.log('Число:' + i)
+	};
+	//3
+	var A=[ 12, -45, 67, 1, 90, 666 ]
+	for ( i=0; i<A.length; i++ ){
+		if (i%2 == 0 && i>0) {
+			console.log(A[i])
+		};
+	};
+	//4
+	var A=[];
+	for (var i = 0; i < 5;i++) {
+		A[i] = +prompt('Введите ' + (i+1) + ' е число')
+	};
+	for (var j = 4; j>=0; j--) {
+		console.log(A[j]);
+	};
+	//5
+	var arr =[];
+	var Summa = 0;
+	for (var i = 0; i < 5; i++) {
+		arr[i] = +prompt('Введите ' + (i+1) + ' е число')
+		Summa += arr[i];
+	};
+	console.log('Сумма элементов массива равна ' + Summa);
+	//6
+	var arr =[];
+	var proizv = 1;
+	var P = +prompt('Какая длина будет у вашего массива?')
+	for (var i = 0; i < P; i++) {
+		arr[i] = +prompt('Введите ' + (i+1) + ' е число')
+		proizv *= arr[i];
+	};
+	console.log('Произведение элементов массива равна ' + proizv);
+	//7
+	var arr =[];
+	var summa = 0;
+	var P = +prompt('Какая длина будет у вашего массива?')
+	for (var i = 0; i < P; i++) {
+		arr[i] = +prompt('Введите ' + (i+1) + ' е число')
+		summa += arr[i];
+	};
+	console.log('Среднее арифметическое элементов массива равна ' + (summa/P));
+	//8
+	var arr = [-1, 2, -3, 4, -5];
+	var key = prompt('Введите значение');
+	var found = false;
+	for (var i = 0; i < arr.length; i++) {
+		if (arr[i] == key) {
+  		found = true;
+  		console.log(i);
+  		}
+	}
+	if (found == false) {
+	console.log('Искомого значения нет');
+	};
+	//9
+	var arr = [-1, 2, -3, 4, -5];
+	var neg = [];
+	var pos = [];
+	for (var i = 0; i < arr.length; i++) {
+		if (arr[i] < 0) {
+  		neg.push(arr[i]);
+  	} else if (arr[i] > 0) {
+  		pos.push(arr[i])
+  	};
+	};
+	console.log(neg, pos);
+	//10
+	var firstArr = [];
+	var secondArr = [];
+	var thirdArr = [];
+	var P = +prompt('Введите длину массивов')
+	for (var i = 0;i < P; i++) {
+		firstArr.push(Math.floor(Math.random() * 10));
+		secondArr[i] = +prompt('Введите ' + (i+1) + 'e число второго массива ');
+		thirdArr[i] = firstArr[i] + secondArr[i];
+	};
+	console.log('Первый массив имеет такие элементы - ' + firstArr + ' Второй массив содержит такие элементы - ' + secondArr + ' Третий массив таков - ' + thirdArr);
+	//11
+	var arr = [];
+	var min = null
+	var max = null;
+	for (var i = 0; i < 5; i++) {
+    	arr[i] = +prompt('Введите ' + (i + 1) + ' е число')
+
+   		if (arr[i] < 0 || min == null || min > arr[i]) {
+     	 min = arr[i];
+    	}
+
+    	if (arr[i] > 0 || max == null || max < arr[i]) {
+    	  max = arr[i];
+    	}
+	};
+	console.log(min, max);
+</script>
+</body>
+</html>
