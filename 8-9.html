@@ -6,7 +6,7 @@
 </head>
 <body>
 <script>
-	//Вариант 1
+	  //Вариант 1
 	var users = ['First','Second','Third'];
 	var login = ['perviy','vtoroy','tretiy'];
 	users.unshift ( prompt('Введите имя нового пользователя'));
@@ -21,13 +21,60 @@
 	//Вариант 2
 	var numbers=[10,100,200,300,7], max=0;
 	if (numbers[1]!=numbers[numbers.length-2])
-	console.log(numbers[1],numbers[numbers.length-2]);	
+	console.log(numbers[1],numbers[numbers.length-2]);
 	for(var i = 0; i < numbers.length; i++)
 	if(numbers[i] > max)
 	max = numbers[i];
 	if (max>=0)
 	console.log(max);
+	  //Вариант 3
+	  var A=[1,2];
+	  var B=[5,7],min=A[0];
+	  for(var i = 0; i <A.length; i++)
+	  if(A[i] < min)
+	  min = A[i];
+	  if(min!=0)
+	  console.log(A[A.length-1]);
+	  if(B.length>3)
+	  console.log(B.length,B[0]);
+	  //Вариант 4
+	  var letters = ["1", "9", "8", "2"], B = [], max=0;
+	  if(letters.length>2)
+	  {
+	    letters.unshift(letters.length)
+	    letters.pop();
+	  }
+	  for (var i = 0; i < letters.length; i++)
+	   {
+	    B[i] = letters[letters.length-1-i];
+	    console.log(B[i]);
+	  }
+	  //Вариант 5
+	  var num1 = [1, 2, 3], num2 = [4, 5, 6], B=[], S;
+	  num2.unshift(4);
+	  if(num1[num1.length-1]<num2[0])
+	  {
+	    console.log(num1.concat(num2));
+	  }
+	  else
+	  {
+	    for (var i = 0; i < num2.length; i++)
+	     {
+	      B[i] = num2[num2.length-1-i];
+	      console.log(B[i]);
+	    }
+	  }
+	  //Вариант 6
+	  var arr = [ 1, 2, 3, 4, 5 ]
+	  arr.push(3);
+	  arr.unshift(6);
+	  if (arr[0]<arr[arr.length-1]) {
+	    console.log(Math.max([arr]))
+	  } else {
+	    console.log(arr.slice([2,5]))
+	  }
 
+/*
 	//1
 	for (;;) {
 		console.log('Yes ');
@@ -129,7 +176,7 @@
     	  max = arr[i];
     	}
 	};
-	console.log(min, max);
+	console.log(min, max);*/
 </script>
 </body>
 </html>
